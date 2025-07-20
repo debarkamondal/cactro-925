@@ -66,7 +66,6 @@ export const POST: RequestHandler = async ({ request, cookies }) => {
 			);
 		}
 		const res = await response.json();
-		console.log(res);
 
 		return new Response(res, { status: 200 });
 	} catch (error) {

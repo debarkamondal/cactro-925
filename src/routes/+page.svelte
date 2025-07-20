@@ -15,7 +15,7 @@
 		textOriginal: string;
 		videoId: string;
 	}) => {
-		const res = await fetch('/reply', {
+		await fetch('/reply', {
 			method: 'POST',
 			body: JSON.stringify({
 				parentCommentId,
@@ -23,7 +23,6 @@
 				videoId
 			})
 		});
-		console.log(await res.json());
 	};
 </script>
 

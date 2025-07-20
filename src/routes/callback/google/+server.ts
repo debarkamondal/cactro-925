@@ -49,7 +49,6 @@ export const GET: RequestHandler = async ({ url, cookies }) => {
 		});
 
 		const userData = await userResponse.json();
-		console.log(userData);
 
 		if (!userResponse.ok) {
 			console.error('User info error:', userData);
@@ -68,8 +67,7 @@ export const GET: RequestHandler = async ({ url, cookies }) => {
 			email: userData.email,
 			name: userData.name,
 			picture: userData.picture,
-			verified_email: userData.verified_email,
-			access_token: tokenData.access_token
+			verified_email: userData.verified_email
 		};
 
 		// Set session cookie (you should encrypt this in production)
